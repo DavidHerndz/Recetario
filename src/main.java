@@ -16,31 +16,33 @@ public class main {
 
     public static void main(String[] args) {
 
-        Ingredientes lechera= new Ingredientes("lechera",false,300);
-        Ingredientes quesoCrema = new Ingredientes("queso crema",false,400);
-        Ingredientes huevo =new Ingredientes("huevo",true,90);
-        Ingredientes vainilla =new Ingredientes("vainilla",false,15);
+        Ingredientes tortilla= new Ingredientes("tortillas",false,300);
+        Ingredientes sal = new Ingredientes("sal",true,400);
+        Ingredientes pollo =new Ingredientes("pollo",true,90);
+        Ingredientes queso =new Ingredientes("queso",true,15);
+        Ingredientes crema =new Ingredientes("crema",false ,330);
 
 
         ArrayList<Ingredientes> ingredientesDisponibles= new ArrayList<>();
-        ingredientesDisponibles.add(lechera);
-        ingredientesDisponibles.add(quesoCrema);
-        ingredientesDisponibles.add(huevo);
-        ingredientesDisponibles.add(vainilla);
+        ingredientesDisponibles.add(tortilla);
+        ingredientesDisponibles.add(queso);
+        ingredientesDisponibles.add(sal);
+        ingredientesDisponibles.add(pollo);
+        ingredientesDisponibles.add(crema);
 
         Receta flan=new Receta(
-                "Flan",
-                20,
-                new ArrayList<>(Arrays.asList(lechera,huevo,quesoCrema,vainilla)),
+                "Tacos dorados",
+                40,
+                new ArrayList<>(Arrays.asList(tortilla,sal,pollo,queso,crema)),
                 new ArrayList<>(Arrays.asList("Preparar los ingrrdientes",
-                        "Mezcla la lechera con los huevos",
-                        "Mezcla lo anterior con el queso crema",
-                        "En una licuadora mezcla todo con la vainilla",
-                        "En un recipiente, coloca la mezcla",
-                        "En una olla coloca agua simple a un nivel dos dedos mas abajo del recipiente",
-                        "Prende la estufa, coloca la olla y encima el recipiente",
-                        "Espera 30 min a que la mezcla ya este lista",
-                        "Disfruta :)")));
+                        "Pon a cpcer el pollo con sal y cilantro",
+                        "Una vez cpcido, procede a desebrarlo",
+                        "Calienta las tortilas que sean necesarias",
+                        "Coloca el pollo en la orilla de una tortilla y enrollalo",
+                        "pon los tacos en una sarten con aceite breviamente calentado",
+                        "Espera a que la tortilla se dore por completo",
+                        "Pon los tacos a escurris de preferencia en un papel absorbente",
+                        "Prepara los tacos con un poc ode crema y queso y salsa de tu preferencia ")));
 
         //crerar un recetario
         Recetario miRecetario =new Recetario(
@@ -52,7 +54,8 @@ public class main {
         System.out.println("1º Agregar un ingrediente nuevo");
         System.out.println("2º Agregar una receta nueva");
         System.out.println("3º Ver mi recetario");
-        System.out.println();
+        System.out.println("4° Eliminar ingrediente");
+        System.out.println("5° Eliminar receta");
         System.out.println("4º Salir");
         //pendiente opcion para salir
 
